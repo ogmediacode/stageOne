@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>HNG Task One</title>
+        <style>
+            body{
+                text-decoration: solid;
+                font-size: 120%;
+                width: auto;}
+                #photo{
+                    height: 75%;
+                    border-radius: 20%;
+                }
+                .text
+                {
+                    text-align: center;
+                    text-decoration: solid;
+                    font-family:Georgia, 'Times New Roman', Times, serif;
+                    justify-content: center;
+                }
+
+        </style>
+    </head>
+
+
+    <body>
+        <h1 data-testid ="slackUserName" class = "text">George Oni</h1>
+        <img data-testid="slackDisplayImage" id="photo" src = "IMG_6737.jpeg">
+        <p data-testid="currentDayOfTheWeek" id = "Date" class = "text"></p>
+        <p data-testid="currentUTCTime" id = "time" class = "text"></p>
+        <p data-testid="myTrack" class = "text">My Track is Frontend</p>
+
+
+        <script>
+            var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var date = new Date();
+            var today = days[date.getDay()];
+            document.getElementById("Date").innerHTML = "Today is: " + today;
+
+            const a = new Date().getTime();
+            document.getElementById("time").innerHTML = "The Current UTC Time in milliseconds is: " + a;
+            
+        </script>
+    </body>
+</html>
